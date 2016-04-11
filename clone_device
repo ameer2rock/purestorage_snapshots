@@ -1,0 +1,9 @@
+# overwrite must equal true to overwrite existing LUN.  There is no check, so make sure you are doing this to the correct device!
+$ cat clone.json
+{
+  "overwrite": true,
+  "source": "host.refreshsnap00.host_data01"
+}
+# the name on the end of the URI is the name of the target device
+$ curl -H "Content-Type:application/json" -X POST -d @clone.json https://array/api/1.4/volume/clone_data01 -k -b ./cookies
+{"source": "host_data01", "serial": "6E1A59CBDC7D475700011054", "created": "2015-09-09T18:23:48Z", "name": "clone_data01", "size": 4398046511104}

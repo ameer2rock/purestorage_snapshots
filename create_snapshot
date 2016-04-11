@@ -1,0 +1,10 @@
+$ cat pg_snap.json
+{
+    "snap": true,
+    "source":  [
+    "host_device"
+    ],
+    "suffix": "refreshsnap01"
+}
+$ curl -H "Content-Type:application/json" -X POST -d @pg_snap.json https://array/api/1.4/pgroup -k -b ./cookies
+[{"source": "host_device", "name": "host_device.refreshsnap01", "created": "2015-09-10T15:54:14Z"}]

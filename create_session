@@ -1,0 +1,2 @@
+curl -H "Content-Type:application/json" -X POST -d @api_token  https://array/api/1.4/auth/session -k -c ./cookies
+{"username": "pureuser"}

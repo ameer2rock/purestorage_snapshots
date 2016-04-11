@@ -1,0 +1,9 @@
+#Query the array with the open session
+
+# get basic performance metrics
+curl -G https://array/api/1.4/array?action=monitor -k -b cookies
+[{"writes_per_sec": 0, "usec_per_write_op": 0, "output_per_sec": 0, "reads_per_sec": 0, "input_per_sec": 0, "time": "2015-09-03T04:09:56Z", "usec_per_read_op": 0, "queue_depth": 0}]
+
+# get array information (name, version, etc) 
+curl -G https://array/api/1.4/array -k -b cookies
+{"version": "4.5.3", "revision": "201508120114+f96731f", "array_name": "array", "id": "6e1a59cb-dc7d-4757-b00a-b82f5ba4eafe"}

@@ -1,0 +1,3 @@
+# once the target is refereshed, the snapshot can be removed.  Leaving it around with use space as blocks are changed on the source volume
+$ curl -H "Content-Type:application/json" -X DELETE https://array/api/1.4/pgroup/host.refreshsnap01 -k -b cookies
+{"name": "host.refreshsnap01"}
